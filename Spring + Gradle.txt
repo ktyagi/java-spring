@@ -1,0 +1,52 @@
+@SpringBootApplication - a wrapper annotation that automatically includes the following common configuration annotations
+    @Configuration - registers the class as a source of beans for Springs Application Context. 
+    @EnableAutoConfiguration - Boot uses this to configure the application based on JAR dependencies we've added to the POM.
+    @ComponentScan - Tells Spring to look for and register beans from base package com.blog.samples and all of its sub packages.
+	
+----------------------------------------------------------------------------------------------------------------------------
+GRADLE SPRING TESTNG SELENIUM HIBERNATE
+http://codesolid.com/using-testng-with-spring/
+https://github.com/CodeSolid/tutorials
+----------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
+GRADLE
+https://www.petrikainulainen.net/getting-started-with-gradle/
+
+Gradle build without tests
+http://stackoverflow.com/questions/4597850/gradle-build-without-tests
+
+gradle build -x test
+
+To exclude any task from gradle use -x command-line option. See the below example
+task compile << {
+    println 'task compile'
+}
+
+task compileTest(dependsOn: compile) << {
+    println 'compile test'
+}
+
+task runningTest(dependsOn: compileTest) << {
+    println 'running test'
+}
+task dist(dependsOn:[runningTest, compileTest, compile]) << {
+    println 'running distribution job'
+}
+Output of: gradle -q dist -x runningTest
+task compile
+compile test
+running distribution job
+
+
+Gradle Goodness: Show More Information About Failed Tests
+https://dzone.com/articles/gradle-goodness-show-more?fromrel=true
+gradle test -i
+test {
+    testLogging {
+        exceptionFormat = 'full'
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------

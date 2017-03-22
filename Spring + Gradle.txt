@@ -50,3 +50,5 @@ test {
     }
 }
 -------------------------------------------------------------------------------------------------------------------------------
+http://stackoverflow.com/questions/20024811/test-automation-framework-for-web-application-using-java
+http://stackoverflow.com/questions/1274057/how-to-make-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitignore

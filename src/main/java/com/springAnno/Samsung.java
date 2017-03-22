@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class Samsung {
 @Autowired
+//@Qualifier("Snap")
 @Qualifier("In")
 MobileProcessor cpu;
 //Snapdragon cpu;
@@ -17,7 +18,6 @@ MobileProcessor cpu;
 	public void getcpu(MobileProcessor cpu) {
 		this.cpu = cpu;
 	}
-
 
 	public void config() {
 		System.out.println ("samsung 12 mp");
